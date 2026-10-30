@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+   
+}
+main{
+      height: 100%;
+    width: 100%;
+    color: white;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 500px 250px;
+    grid-template-areas: "header header header"
+    "herodiv herodiv herodiv "
+    "bottom-left bottom-center bottom-right";
+    gap: 10px;
+    padding: 10px;
+
+}
+header{
+    background-color:rgb(246, 143, 9);
+    grid-area:header ;
+}
+
+.herodiv{
+    background-color:cadetblue;
+    grid-area:herodiv;
+}
+.bottom-left{
+    background-color: #d3d024;
+    grid-area: bottom-left;
+}
+.bottom-center{
+    background-color: #5b0b49;
+    grid-area:bottom-center ;
+}
+.bottom-right{
+    background-color: #e6113f;
+    grid-area:bottom-right ;
+}
+
+header{
+    background-color: #111;
+    grid-area: header;
+    padding: 0 30px;
+    border-radius: 12px;
+}
+nav{
+    height: 100%;
+   display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+}
+nav h2{
+    color:white;
+    font-size: 26px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+nav h2 span{
+    color: #ff3b30;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+.nav-links a{
+   text-decoration: none;
+    color: #ccc;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    transition: 0.3s; 
+}
+.nav-links a:hover {
+    color: #ff3b30;
+}
+nav button {
+    background-color: #ff3b30;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+nav button:hover {
+    background-color: white;
+    color: #111;
+}
+.herodiv{
+    grid-area: herodiv;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #111;
+}
+.herodiv video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 600px;
+}
+
+/* Small Heading */
+.hero-content h3 {
+    color: #ff3b30;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Heading */
+.hero-content h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    font-weight: 800;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+.hero-content p {
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-family: Arial, sans-serif;
+}
+
+/* Explore Button */
+.hero-content button {
+    background-color: #ff3b30;
+    color: white;
+    padding: 14px 28px;
+    border:transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+.bottom-left,
+.bottom-center,
+.bottom-right {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #222;
+}
+
+
+
+.bottom-left img,
+.bottom-center img,
+.bottom-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+
+
+.bottom-left::after,
+.bottom-center::after,
+.bottom-right::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.9),
+        transparent
+    );
+}
+
+
+
+.card-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    color: white;
+}
+
+
+
+.card-content h4 {
+    color: #ff493e;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+
+
+.card-content h2 {
+    font-size: 22px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 8px;
+}
+
+
+
+.card-content p {
+    color: #cccccc;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+
+.card-content a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 1px solid #ff493e;
+    padding-bottom: 4px;
+}
+
+.bottom-left:hover img,
+.bottom-center:hover img,
+.bottom-right:hover img {
+    transform: scale(1.08);
+}
